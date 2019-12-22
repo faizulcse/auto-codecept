@@ -1,0 +1,13 @@
+## Environment normalization:
+tests/_data/.gitkeep
+tests/_output/*
+tests/_support/_generated/
+vendor/
+
+# PhpStorm
+.idea/
+
+# macOS Specific
+.DS_Store
+.DS_Store?
+.vscode/

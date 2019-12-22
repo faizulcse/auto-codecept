@@ -1,0 +1,40 @@
+class_name: IosGuy
+modules:
+  enabled:
+    # Enable appium driver
+    - \Appium\AppiumDriver
+    -  Asserts
+  config:
+    # Configuration for appium driver
+    \Appium\AppiumDriver:
+      host: 127.0.0.1
+      port: 4723
+      dummyRemote: false
+      resetAfterSuite: true
+      resetAfterCest: false
+      resetAfterTest: false
+      resetAfterStep: false
+      capabilities:
+        # PATH OF YOUR APP (something like  /Users/username/Documents/ios.app)
+        app: ''
+        # xcideOrgId is Apple developer team identifier string.
+        xcodeOrgId: ''
+        # xcodeSigningId is a string representing a signing certificate. iPhone Developer by default.
+        xcodeSigningId: 'iPhone Developer'
+        platformName: 'iOS'
+        platformVersion: '11.2'
+        deviceName: 'iPhone8'
+        # Your device udid
+        udid: ''
+        useNewWDA: false
+        newCommandTimeout: 7200
+        automationName: 'XCUITest'
+        autoAcceptAlerts: true
+        fullReset: true
+        noReset: false
+        nativeInstrumentsLib: true
+        connection_timeout: 500
+        request_timeout: 500
+        skipUnlock: true
+        clearSystemFiles: true
+        showIOSLog: true

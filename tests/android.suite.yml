@@ -1,0 +1,29 @@
+class_name: AndroidGuy
+modules:
+  enabled:
+    # Enable appium driver
+    - \Appium\AppiumDriver
+    -  Asserts
+  config:
+    # Configuration for appium driver
+    \Appium\AppiumDriver:
+      host: 127.0.0.1
+      port: 4723
+      dummyRemote: false
+      resetAfterSuite: true
+      resetAfterCest: false
+      resetAfterTest: false
+      resetAfterStep: false
+      capabilities:
+        platformName: 'Android'
+        deviceName: 'Android'
+        appPackage: io.selendroid.testapp
+        fullReset: true
+        noReset: false
+        newCommandTimeout: 7200
+        nativeInstrumentsLib: true
+        connection_timeout: 500
+        request_timeout: 500
+        autoAcceptAlerts: true
+        appActivity: io.selendroid.testapp.HomeScreenActivity
+        skipUnlock: true
